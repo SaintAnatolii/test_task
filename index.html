@@ -1,13 +1,127 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test_task</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тестовое задание для ВКС</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- /  -->
+  <link rel="stylesheet" href="/src/style.css">
+  <script defer src="/src/main.js"></script>
+</head>
+
+<body>
+  <main class="appeal-container">
+    <section class="appeal-info-section">
+      <h1 class="appeal-info-title"> В случае несогласия с результатами экзамена Кандидат имеет право на подачу
+        апелляции: </h1>
+      <ul class="appeal-rules-list">
+        <li class="appeal-rule-item"> <span class="bullet-point"></span> <span>сроки подачи: не позднее 6 недель с даты
+            письменного экзамена.</span> </li>
+        <li class="appeal-rule-item"> <span class="bullet-point"></span> <span>сроки рассмотрения: от 2 дней до 3 недель
+            с даты получения запроса.</span> </li>
+        <li class="appeal-rule-item"> <span class="bullet-point"></span> <span>стоимость: 9500 рублей* 100 рублей
+            комиссия за онлайн перевод</span> </li>
+      </ul>
+    </section>
+
+
+    <!-- загрузка документов -->
+    <section class="appeal-steps-section">
+
+      <!-- 1 колонка -->
+      <article class="appeal-step">
+        <h2 class="step-title"> СКАЧАЙТЕ И ЗАПОЛНИТЕ два файла с заявлением на апелляцию </h2>
+        <div class="documents-download-group">
+          <div class="card">
+            <div class="round">
+              <img src="/src/img/arrow.svg" alt="download arrow">
+            </div>
+            <div class="card_pdf">
+              <img src="/src/img/PDF.svg" alt="">
+            </div>
+            <div class="card_number">
+              <img src="/src/img/1.svg" alt="">
+            </div>
+            <a class="card_download" href="/src/Шаблон_документа_для_скачивания.pdf"
+              download="Шаблон_документа_для_скачивания_1.pdf">
+              Скачать
+            </a>
+          </div>
+          <div class="card">
+            <div class="round">
+              <img src="/src/img/arrow.svg" alt="download arrow">
+            </div>
+            <div class="card_pdf">
+              <img src="/src/img/PDF.svg" alt="">
+            </div>
+            <div class="card_number">
+              <img src="/src/img/2.svg" alt="">
+            </div>
+            <a class="card_download" href="/src/Шаблон_документа_для_скачивания.pdf"
+              download="Шаблон_документа_для_скачивания_1.pdf">
+              Скачать
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2 колонка -->
+      <article class="appeal-step">
+        <h2 class="step-title"> ОТСКАНИРУЙТЕ И ЗАГРУЗИТЕ заполненные заявления </h2>
+        <div class="document_upload_group">
+          <div class="card upload" id="upload-card-1">
+            <input type="file" id="file-input-1" accept=".pdf,.jpg,.jpeg,.png" class="file-input">
+            <div class="round">
+              <img src="/src/img/add.svg" alt="Plus icon" class="plus-icon">
+              <img src="/src/img/edit.svg" alt="Edit icon" class="edit-icon">
+            </div>
+            <div class="upload_number">
+              <img src="/src/img/1.svg" alt="">
+            </div>
+            <div class="upload_checkmark">
+              <img src="/src/img/done_b.svg" alt="done image">
+            </div>
+          </div>
+
+
+          <div class="card upload" id="upload-card-2">
+            <input type="file" id="file-input-2" accept=".pdf,.jpg,.jpeg,.png" class="file-input">
+            <div class="round">
+              <img src="./src/img/add.svg" alt="Plus icon" class="plus-icon">
+              <img src="./src/img/edit.svg" alt="Edit icon" class="edit-icon">
+            </div>
+            <div class="upload_number">
+              <img src="/src/img/2.svg" alt="">
+            </div>
+            <div class="upload_checkmark">
+              <img src="/src/img/done_b.svg" alt="done image">
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 колонка -->
+      <article class="appeal-step">
+        <div class="step-title payment-title"> <span class="title-main-text">ОПЛАТИТЕ подачу апелляции</span> <span
+            class="title-price-text">Стоимость апелляции - 7700 ₽</span> </div> <button class="payment-button"
+          type="button"> Оплата апелляции </button>
+      </article>
+    </section>
+
+
+    <aside class="important-info-section">
+      <div class="info-box">
+        <p class="info-text"> Важная информация для корректного заполнения заявления:<br> Centre name: BKC-ih Moscow
+          IELTS Test Centre<br> Centre number: RU087<br> Candidate number: Цифры в верхнем правом углу сертификата/можно
+          не заполнять, если сертификат еще не получен. </p>
+      </div>
+    </aside>
+  </main>
+
+
+</body>
+
 </html>

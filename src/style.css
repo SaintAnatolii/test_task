@@ -1,96 +1,494 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f5f5f5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.appeal-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #ffffff;
+    border: 1px solid #c4c4c4;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.appeal-info-section {
+    margin-bottom: 40px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.appeal-info-title {
+    font-size: 18px;
+    font-weight: 300;
+    color: #131718;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.appeal-rules-list {
+    list-style: none;
+    padding-left: 24px;
 }
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+
+.appeal-rule-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #131718;
+    line-height: 1.5;
+}
+
+.bullet-point {
+    width: 8px;
+    height: 8px;
+    background-color: #ec1630;
+    border-radius: 50%;
+    margin-right: 12px;
+    margin-top: 10px;
+    flex-shrink: 0;
+}
+
+.appeal-steps-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.appeal-step {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.step-title {
+    font-size: 18px;
+    font-weight: 300;
+    color: #000000;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.documents-download-group,
+.document_upload_group {
+    display: flex;
+    gap: 25px;
 }
 
 .card {
-  padding: 2em;
+    width: 80px;
+    height: 105px;
+    border: 5px solid rgba(196, 196, 196, 1);
+    border-radius: 10px;
+    background: rgba(196, 196, 196, 0);
+    position: relative;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.read-the-docs {
-  color: #888;
+.round {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 3px solid rgba(196, 196, 196, 1);
+    background: rgba(237, 22, 49, 1);
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.card_pdf {
+    font-family:
+        'Roboto Mono', 'Lucida Grande', 'Lucida Sans', Arial, helvetica,
+        sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(237, 22, 49, 1);
+    align-self: flex-start;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.card_number {
+    font-family:
+        'Roboto Mono', 'Lucida Grande', 'Lucida Sans', Arial, helvetica,
+        sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: rgba(237, 22, 49, 1);
+    position: absolute;
+    top: 25px;
+    left: 8px;
+}
+
+.card_download {
+    display: block;
+    color: rgba(237, 22, 49, 1);
+    font-size: 12px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.upload {
+    flex-direction: row;
+    gap: 10px;
+}
+
+.upload-icon {
+    width: 180px;
+    height: 110px;
+}
+
+.payment-title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title-main-text {
+    font-size: 18px;
+    font-weight: 300;
+    color: #000000;
+}
+
+.title-price-text {
+    font-size: 12px;
+    font-weight: 300;
+    color: #ec1630;
+}
+
+.card.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-button {
+    background-color: #ec1630;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 50px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Roboto', Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.payment-button:hover {
+    background-color: #d01428;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(236, 22, 48, 0.3);
+}
+
+.payment-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(236, 22, 48, 0.3);
+}
+
+.payment-button:focus {
+    outline: 2px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+.important-info-section {
+    margin-top: 40px;
+}
+
+.info-box {
+    background-color: #eeeeee;
+    border: 1px solid #ec1630;
+    padding: 20px;
+}
+
+.info-text {
+    font-size: 12px;
+    font-weight: 300;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.upload-icon-plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.upload-checkmark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(10px, -50%);
+    display: none;
+}
+
+.file-loaded .upload-icon-plus {
+    display: none;
+}
+
+.file-loaded .upload-checkmark {
+    display: block;
+}
+
+.round .edit-icon {
+    display: none;
+}
+
+.file-loaded .round .edit-icon {
+    display: block;
+}
+
+.file-loaded .round .plus-icon {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .appeal-container {
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .appeal-container {
+        padding: 30px;
+    }
+
+    .appeal-steps-section {
+        gap: 30px;
+    }
+
+    .step-title {
+        min-height: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .appeal-container {
+        padding: 20px;
+    }
+
+    .appeal-steps-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .appeal-step {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .step-title {
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+
+    .documents-download-group,
+    .document_upload_group {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .important-info-section {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .appeal-container {
+        padding: 16px;
+    }
+
+    .appeal-info-title {
+        font-size: 16px;
+    }
+
+    .appeal-rule-item {
+        font-size: 16px;
+    }
+
+    .appeal-steps-section {
+        gap: 35px;
+        margin-bottom: 40px;
+    }
+
+    .step-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .title-main-text {
+        font-size: 16px;
+    }
+
+    .payment-button {
+        padding: 12px 40px;
+        font-size: 13px;
+    }
+
+    .info-box {
+        padding: 16px;
+    }
+
+    .info-text {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .appeal-container {
+        padding: 12px;
+    }
+
+    .appeal-info-section {
+        margin-bottom: 30px;
+    }
+
+    .appeal-info-title {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .appeal-rule-item {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .bullet-point {
+        width: 6px;
+        height: 6px;
+        margin-top: 8px;
+    }
+
+    .documents-download-group,
+    .document_upload_group {
+        gap: 20px;
+    }
+
+    .card {
+        width: 70px;
+        height: 95px;
+    }
+
+    .upload-icon {
+        width: 160px;
+        height: 100px;
+    }
+
+    .payment-title {
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .appeal-container {
+        padding: 10px;
+    }
+
+    .appeal-info-title {
+        font-size: 14px;
+    }
+
+    .appeal-rule-item {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .appeal-rules-list {
+        padding-left: 18px;
+    }
+
+    .bullet-point {
+        margin-right: 10px;
+        margin-top: 7px;
+    }
+
+    .documents-download-group,
+    .document_upload_group {
+        gap: 15px;
+    }
+
+    .card {
+        width: 65px;
+        height: 90px;
+        border-width: 3px;
+    }
+
+    .round {
+        width: 35px;
+        height: 35px;
+        border-width: 2px;
+        top: -12px;
+        right: -12px;
+    }
+
+    .card_pdf {
+        font-size: 12px;
+    }
+
+    .card_number,
+    .upload_number {
+        font-size: 20px;
+    }
+
+    .step-title {
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
+
+    .title-main-text {
+        font-size: 15px;
+    }
+
+    .title-price-text {
+        font-size: 11px;
+    }
+
+    .payment-button {
+        padding: 10px 35px;
+        font-size: 12px;
+    }
+
+    .info-box {
+        padding: 14px;
+    }
+
+    .info-text {
+        font-size: 10px;
+        line-height: 1.5;
+    }
 }
